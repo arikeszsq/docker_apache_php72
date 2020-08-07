@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  laravel:
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile7
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+
